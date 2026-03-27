@@ -114,19 +114,31 @@ function noClicked() {
 
 function yesClicked() {
   document.body.innerHTML = `
-    <h1>❤️ You just made me the happiest guy ❤️</h1>
-    <p style="color:white; font-size:20px;">Now come here… I deserve a hug 😌</p>
+    <div style="text-align:center; padding:20px;">
+      
+      <h1 style="color:white;">❤️ You just made me the happiest guy ❤️</h1>
+
+      <img src="photo.jpeg" 
+           style="width:75%; max-width:280px; border-radius:20px; margin:20px 0; box-shadow:0 10px 30px rgba(0,0,0,0.3);">
+
+      <p style="color:white; font-size:20px;">
+        Now come here… I deserve a hug 😌
+      </p>
+
+    </div>
   `;
 
   // Confetti
-  for(let i=0; i<50; i++){
+  for (let i = 0; i < 80; i++) {
     let conf = document.createElement("div");
     conf.className = "confetti";
-    conf.style.left = Math.random()*100 + "vw";
-    conf.style.animationDuration = (Math.random()*3+2)+"s";
+    conf.style.left = Math.random() * 100 + "vw";
+    conf.style.animationDuration = (Math.random() * 2 + 2) + "s";
     document.body.appendChild(conf);
   }
 }
+
+
 </script>
 
 </body>
